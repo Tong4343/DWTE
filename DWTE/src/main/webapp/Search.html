@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DWTE-Login(Search)</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-plus/lib/theme-chalk/index.css">
+  <style>
+	  	h1 {
+		font-size: 40px;
+		text-align: center;
+		margin-bottom: 30px;
+		background-color: green;
+		color: white;
+	}
+    img {
+		float:right;
+		height: 60vh;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto;
+		margin-top:60px;
+		margin-bottom: 15px;
+		 border-radius: 10px 10px 10px 10px;
+	}
+      input[type="text"] {
+            width: 350px; 
+            height: 50px; 
+            margin-top: 170px; 
+            margin-left: 150px; 
+            padding: 5px; 
+            box-sizing: border-box; 
+            font-size: 16px;
+            }
+       input[type="password"] {
+            width: 350px; 
+            height: 50px; 
+            margin-top: 20px;
+            margin-left: 150px; 
+            padding: 5px; 
+            box-sizing: border-box;
+            font-size: 16px; 
+            }
+        button[onclick="login()"] {
+            width: 150px; 
+            height: 40px; 
+            margin-top: 10px; 
+            margin-left: 250px; 
+            padding: 5px 10px;
+            font-size: 18px; 
+        }
+         button[onclick="menu()"] {
+            width: 400px; 
+            height: 40px;
+            margin-top: 55px; 
+            margin-left: 130px; 
+            padding: 5px 10px;
+            font-size: 18px;
+         }
+          #TopLink {
+            text-align: center; 
+            margin-top: 20px; 
+            font-size: 16px; 
+            color: #333; 
+        }
+  </style>
+</head>
+<body>
+  <div id="background">
+    <h1>Decide What To Eat</h1>
+    <div id="TopLink">
+      <a href="About.html" target="_blank">About</a> | 
+      <a href="About.html" target="_blank">Contact us</a>
+    </div>
+   
+    <div class="block">
+      <img src=>
+    </div>
+    	<div>
+		<img src="images/Food2.jpg" style="width: 50%;">
+	</div>
+
+  </div>
+
+  <script src="https://unpkg.com/vue@2"></script>
+  
+  <div id="login">
+      <div class="box-card">
+        <div id="form">
+          <div>
+        
+        <input type="text" placeholder="Please enter your username">
+    </div>
+    <div>       
+        <input type="password" placeholder="Please enter your password">
+    </div>     
+          
+        </div>
+      </div>
+    </div>
+  
+	<div class="button-container">		
+		<button onclick="login()">Log in</button>	
+		<br>
+		<button onclick="menu()">You can also access without logging in</button>				
+	</div>
+
+    
+<script>
+		function login() {
+			
+			window.location.href = "Menu.html";
+		}		
+		Menu.html
+		function menu() {
+			
+			window.location.href = "Menu.html";
+		}			
+	</script>
+</body>
+</html>
