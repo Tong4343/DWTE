@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dwte Menu</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 30px;
+    }
+
+    h1 {
+      color: rgb(10, 10, 10);
+    }
+
+    /* 样式规则用于调整按钮的大小和格式 */
+    button {
+      /* 设置按钮的字体大小 */
+      font-size: 18px;
+      
+      /* 设置按钮的内边距，使按钮更大 */
+      padding: 10px 20px;
+      
+      /* 设置按钮的边框样式、宽度和颜色 */
+      border: 2px solid #4CAF50;
+      
+      /* 设置按钮的背景颜色 */
+      background-color: #4CAF50;
+      
+      /* 设置按钮的文字颜色 */
+      color: white;
+      
+      /* 设置按钮的圆角 */
+      border-radius: 5px;
+      
+      /* 设置按钮的鼠标悬停样式 */
+      cursor: pointer;
+      margin: 5px; /* 添加一些外边距 */
+    }
+
+    /* 样式规则用于调整图像的样式 */
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px; /* 调整图像上方的外边距 */
+    }
+  </style>
+</head>
+<body>
+
+<h1>Dwte Menu</h1>
+<!-- Recipes Section -->
+<div id="recipes-container"></div>
+
+<script>
+  // JavaScript function to handle button clicks
+  function showFood(type) {
+    // 使用 fetch 发送请求
+    fetch(`http://localhost:3000/recipes`)
+      .then(response => response.json())
+      .then(data => {
+        // 过滤特定类型的食谱
+        const recipes = data.filter(recipe => recipe.Cuisine === type);
+
+        // 在这里处理从服务器返回的数据，可以在页面上显示或进行其他操作
+        console.log('Recipes for ' + type + ':', recipes);
+
+        // 将数据插入到页面中
+        const recipesContainer = document.getElementById('recipes-container');
+        recipesContainer.innerHTML = ''; // 清空之前的内容
+
+        recipes.forEach(recipe => {
+          const recipeElement = document.createElement('div');
+          recipeElement.textContent = `Name: ${recipe.Name}, Type: ${recipe.Cuisine}`;
+          recipesContainer.appendChild(recipeElement);
+        });
+      })
+      .catch(error => console.error('Error:', error));
+  }
+</script>
+
+<!-- Buttons Section -->
+<div>
+  <button onclick="showFood('Indian')">Indian Food</button>
+  <button onclick="showFood('Chinese')">Chinese Food</button>
+  <button onclick="showFood('Nigeria')">Nigeria Food</button>
+</div>
+
+
+<!-- Image Section -->
+
+<div>
+		<img src="images/food3.jpg" style="width: 300%; height: auto;">
+	</div>
+
+</body>
+</html>
