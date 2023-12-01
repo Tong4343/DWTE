@@ -2,71 +2,84 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Contact us Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Added CSS for increased font size and logo styling */
+        .banner h1,
+        .banner p,
+        .contact-info h2,
+        .contact-info address,
+        .footer p {
+            font-size: 1.5em; /* You can adjust the size as needed */
+        }
+
+        h3 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: green;
+            color: white;
+        }
+
+        /* Added CSS to move buttons to the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            margin-top: auto;
+        }
+    </style>
+    <title>Contact us Page</title>
 </head>
 
 <body>
-	<!-- Header section -->
-	<header>
-		<button class="hamburger" id="hamburger-icon">
-			<span onclick="openNavbar()"> ☰</span>
-		</button>
-		
-		<button class="reachUs-button">Call us</button>
-	</header>
+    <!-- DecideWhatToEat section -->
+    <section class="banner">
+        <h3>DecideWhatToEat</h3>
+        <img src="images/images.png"
+            alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>We're here to answer any questions you may have.</p>
+    </section>
 
-	<!-- banner section -->
-	<section class="banner">
-		<img src=
-"https://media.geeksforgeeks.org/wp-content/uploads/20230822131732/images.png"
-			alt="Welcome to our Contact Us page">
-		<h1>Get in Touch With Us</h1>
-		<p>We're here to answer any questions you may have.</p>
-	</section>
+    <!-- Contact form -->
+    <section class="contact-form">
+        <div class="form-container">
+            <!-- Removed Your Details and form messages -->
+            <form action="#" method="POST">
+                <!-- Removed Submit button -->
+            </form>
+        </div>
+    </section>
 
-	<!-- Contact form -->
-	<section class="contact-form">
-		<div class="form-container">
-			<h2>Your Details</h2>
-			<form action="#" method="POST">
+    <!-- Company contact info -->
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <address>
+            DWTE<br>
+            123 Main Street<br>
+            City, State Zip Code<br>
+            Phone: <a href="tel:1234567890">123-456-7890</a><br>
+            Email: <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+        <button class="reachUs-button" style="margin-top: 10px;">Call us</button>
+    </section>
 
-				<label for="name">Name: </label>
-				<input type="text" id="name" name="name" required>
+    <!-- Footer section -->
+    <footer>
+        <p>© 2023 Your Company. All rights reserved.</p>
+        <!-- Additional functionality below the copyright notice -->
+        <!-- Add comments or modify this part as needed -->
+    </footer>
 
-				<label for="email">Email: </label>
-				<input type="email" id="email" name="email" required>
 
-				<label for="phone">Phone: </label>
-				<input type="tel" id="phone" name="phone">
 
-				<label for="message">Message: </label>
-				<textarea id="message" name="message" rows="4" required></textarea>
-
-				<button type="submit" class="submit-button">Submit</button>
-			</form>
-		</div>
-	</section>
-
-	<!-- Company contact info -->
-	<section class="contact-info">
-		<h2>Contact Information</h2>
-		<address>
-			DWTE<br>
-			123 Main Street<br>
-			City, State Zip Code<br>
-			Phone: <a href="tel:1234567890">123-456-7890</a><br>
-			Email: <a href="mailto:info@example.com">info@example.com</a>
-		</address>
-	</section>
-
-	<!-- Footer section -->
-	<footer>
-		<p>© 2023 Your Company. All rights reserved.</p>
-	</footer>
-	<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
